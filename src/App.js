@@ -1,11 +1,16 @@
 
+import { Routes, Route, Link } from 'react-router';
 import './App.css';
-import Characterslist from './pages/CharactersLIst';
+import CharactersList from './pages/CharactersList';
+import Character from './pages/Character';
 
 function App() {
   return (
     <div className="App">
-      <Characterslist />
+      <Routes>
+        <Route path='/' element={ <CharactersList /> } />
+        <Route path='/:id' element={ <Character /> } />
+      </Routes>
     </div>
   );
 }
