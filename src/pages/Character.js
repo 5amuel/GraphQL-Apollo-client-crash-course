@@ -7,7 +7,6 @@ export default function Character() {
 
     const { id } =useParams()
     const {data, loading, error} = useCharacter(id)
-    console.log(error, loading, data)
 
     if (error) return <div>Something went wrong</div>
     if (loading) return <div>Spinner...</div>
